@@ -33,6 +33,7 @@
     [super viewDidLoad];
 	
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navBar.png"] forBarMetrics:UIBarMetricsDefault];
+    self.navigationItem.hidesBackButton = YES;
     
     [self setupLetter];
     

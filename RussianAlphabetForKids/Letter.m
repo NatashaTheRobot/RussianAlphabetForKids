@@ -152,6 +152,7 @@
     
     Letter *letter23 = [[Letter alloc] init];
     letter23.letter = @"Ц";
+    letter23.smallLetter = @"ц";
     letter23.imageName = @"chicks.png";
     letter23.word = @"Цыплёнки";
     
@@ -189,7 +190,7 @@
     letter29.letter = @"Ь";
     letter29.smallLetter = @"ь";
     letter29.imageName = @"six.png";
-    letter29.word = @"шестЪ";
+    letter29.word = @"шестЬ";
     
     Letter *letter30 = [[Letter alloc] init];
     letter30.letter = @"Э";
