@@ -13,8 +13,10 @@
 @property (strong, nonatomic) NSString *letter;
 @property (strong, nonatomic) NSString *smallLetter;
 @property (strong, nonatomic) NSString *word;
-@property (strong, nonatomic) NSString *imageName;
 
 + (NSArray *)allAlphabetLetters;
+
+- (UIImage *)image;
+- (void)playSound;
 
 @end

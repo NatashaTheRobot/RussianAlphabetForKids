@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
-@property (weak, nonatomic) IBOutlet UIButton *playSoundWithButton;
+@property (strong, nonatomic) Letter *letter;
 
 - (void)setupLetter;
 
@@ -42,13 +42,18 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.letter playSound];
+}
+
 - (void)setupLetter
 {
     self.view.tag = self.letterIndex;
-    Letter *letter = [Letter allAlphabetLetters][self.view.tag];
-    self.wordLabel.text = letter.word;
-    self.imageView.image = [UIImage imageNamed:letter.imageName];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@ %@", letter.letter, letter.smallLetter];
+    self.letter = [Letter allAlphabetLetters][self.view.tag];
+    self.wordLabel.text = self.letter.word;
+    self.imageView.image = [self.letter image];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ %@", self.letter.letter, self.letter.smallLetter];
 }
 
 - (void)addGestureBackRecognizer
