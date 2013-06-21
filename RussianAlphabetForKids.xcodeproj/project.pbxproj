@@ -82,6 +82,10 @@
 		9C08B6991774A13A00C7FF75 /* cheburashka@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6971774A13900C7FF75 /* cheburashka@2x.png */; };
 		9C08B69C1774A25D00C7FF75 /* detour.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B69A1774A25900C7FF75 /* detour.png */; };
 		9C08B69D1774A25D00C7FF75 /* detour@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B69B1774A25B00C7FF75 /* detour@2x.png */; };
+		9C08B6A01774A46C00C7FF75 /* iodine.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B69E1774A46900C7FF75 /* iodine.png */; };
+		9C08B6A11774A46C00C7FF75 /* iodine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B69F1774A46A00C7FF75 /* iodine@2x.png */; };
+		9C08B6A41774A5BA00C7FF75 /* six.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6A21774A5B600C7FF75 /* six.png */; };
+		9C08B6A51774A5BA00C7FF75 /* six@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6A31774A5B800C7FF75 /* six@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +170,10 @@
 		9C08B6971774A13900C7FF75 /* cheburashka@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cheburashka@2x.png"; sourceTree = "<group>"; };
 		9C08B69A1774A25900C7FF75 /* detour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detour.png; sourceTree = "<group>"; };
 		9C08B69B1774A25B00C7FF75 /* detour@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detour@2x.png"; sourceTree = "<group>"; };
+		9C08B69E1774A46900C7FF75 /* iodine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iodine.png; sourceTree = "<group>"; };
+		9C08B69F1774A46A00C7FF75 /* iodine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iodine@2x.png"; sourceTree = "<group>"; };
+		9C08B6A21774A5B600C7FF75 /* six.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = six.png; sourceTree = "<group>"; };
+		9C08B6A31774A5B800C7FF75 /* six@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "six@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +262,10 @@
 		9C08B61F1774920700C7FF75 /* LetterImages */ = {
 			isa = PBXGroup;
 			children = (
+				9C08B6A21774A5B600C7FF75 /* six.png */,
+				9C08B6A31774A5B800C7FF75 /* six@2x.png */,
+				9C08B69E1774A46900C7FF75 /* iodine.png */,
+				9C08B69F1774A46A00C7FF75 /* iodine@2x.png */,
 				9C08B69A1774A25900C7FF75 /* detour.png */,
 				9C08B69B1774A25B00C7FF75 /* detour@2x.png */,
 				9C08B6961774A13700C7FF75 /* cheburashka.png */,
@@ -436,6 +448,10 @@
 				9C08B6991774A13A00C7FF75 /* cheburashka@2x.png in Resources */,
 				9C08B69C1774A25D00C7FF75 /* detour.png in Resources */,
 				9C08B69D1774A25D00C7FF75 /* detour@2x.png in Resources */,
+				9C08B6A01774A46C00C7FF75 /* iodine.png in Resources */,
+				9C08B6A11774A46C00C7FF75 /* iodine@2x.png in Resources */,
+				9C08B6A41774A5BA00C7FF75 /* six.png in Resources */,
+				9C08B6A51774A5BA00C7FF75 /* six@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

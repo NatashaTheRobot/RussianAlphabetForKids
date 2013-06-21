@@ -72,12 +72,11 @@
     letter9.imageName = @"turkey.png";
     letter9.word = @"Индюк";
     
-    //MISSING
     Letter *letter10 = [[Letter alloc] init];
     letter10.letter = @"Й";
     letter10.smallLetter = @"й";
-    letter10.imageName = @"missing.png";
-    letter10.word = @"Й";
+    letter10.imageName = @"iodine.png";
+    letter10.word = @"Йод";
     
     Letter *letter11 = [[Letter alloc] init];
     letter11.letter = @"К";
@@ -186,7 +185,6 @@
     letter28.imageName = @"mouse.png";
     letter28.word = @"мЫшка";
     
-    //MISSING IMAGE
     Letter *letter29 = [[Letter alloc] init];
     letter29.letter = @"Ь";
     letter29.smallLetter = @"ь";
