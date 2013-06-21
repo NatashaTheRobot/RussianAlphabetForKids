@@ -178,6 +178,38 @@
 		9C08B6AB1774AC0500C7FF75 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9C08B6AC1774AC0600C7FF75 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9C08B6AD1774AC0700C7FF75 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C08B6B11774B1A400C7FF75 /* baloons.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = baloons.mp4; sourceTree = "<group>"; };
+		9C08B6B21774B1A400C7FF75 /* bear.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bear.mp4; sourceTree = "<group>"; };
+		9C08B6B31774B1A400C7FF75 /* boat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = boat.mp4; sourceTree = "<group>"; };
+		9C08B6B41774B1A400C7FF75 /* bread.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bread.mp4; sourceTree = "<group>"; };
+		9C08B6B51774B1A500C7FF75 /* bug.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bug.mp4; sourceTree = "<group>"; };
+		9C08B6B61774B1A500C7FF75 /* butterfly.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = butterfly.mp4; sourceTree = "<group>"; };
+		9C08B6B71774B1A500C7FF75 /* cake.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cake.mp4; sourceTree = "<group>"; };
+		9C08B6B81774B1A500C7FF75 /* cat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.mp4; sourceTree = "<group>"; };
+		9C08B6B91774B1A500C7FF75 /* cheburashka.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cheburashka.mp4; sourceTree = "<group>"; };
+		9C08B6BA1774B1A500C7FF75 /* chicks.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = chicks.mp4; sourceTree = "<group>"; };
+		9C08B6BB1774B1A500C7FF75 /* dandelion.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dandelion.mp4; sourceTree = "<group>"; };
+		9C08B6BC1774B1A500C7FF75 /* detour.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = detour.mp4; sourceTree = "<group>"; };
+		9C08B6BD1774B1A500C7FF75 /* duck.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = duck.mp4; sourceTree = "<group>"; };
+		9C08B6BE1774B1A500C7FF75 /* elf.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = elf.mp4; sourceTree = "<group>"; };
+		9C08B6BF1774B1A500C7FF75 /* elmtree.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = elmtree.mp4; sourceTree = "<group>"; };
+		9C08B6C01774B1A500C7FF75 /* fish.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fish.mp4; sourceTree = "<group>"; };
+		9C08B6C11774B1A500C7FF75 /* house.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.mp4; sourceTree = "<group>"; };
+		9C08B6C21774B1A500C7FF75 /* iodine.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iodine.mp4; sourceTree = "<group>"; };
+		9C08B6C31774B1A500C7FF75 /* mouse.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mouse.mp4; sourceTree = "<group>"; };
+		9C08B6C41774B1A500C7FF75 /* mushroom.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mushroom.mp4; sourceTree = "<group>"; };
+		9C08B6C51774B1A500C7FF75 /* notes.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = notes.mp4; sourceTree = "<group>"; };
+		9C08B6C61774B1A500C7FF75 /* owl.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = owl.mp4; sourceTree = "<group>"; };
+		9C08B6C71774B1A500C7FF75 /* pig.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pig.mp4; sourceTree = "<group>"; };
+		9C08B6C81774B1A500C7FF75 /* porcupine.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = porcupine.mp4; sourceTree = "<group>"; };
+		9C08B6C91774B1A500C7FF75 /* puppy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = puppy.mp4; sourceTree = "<group>"; };
+		9C08B6CA1774B1A500C7FF75 /* six.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = six.mp4; sourceTree = "<group>"; };
+		9C08B6CB1774B1A500C7FF75 /* spinner.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = spinner.mp4; sourceTree = "<group>"; };
+		9C08B6CC1774B1A500C7FF75 /* star.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = star.mp4; sourceTree = "<group>"; };
+		9C08B6CD1774B1A500C7FF75 /* sun.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sun.mp4; sourceTree = "<group>"; };
+		9C08B6CE1774B1A500C7FF75 /* turkey.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = turkey.mp4; sourceTree = "<group>"; };
+		9C08B6CF1774B1A500C7FF75 /* water.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = water.mp4; sourceTree = "<group>"; };
+		9C08B6D01774B1A500C7FF75 /* watermelon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = watermelon.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +371,38 @@
 		9C08B6AA1774AA2E00C7FF75 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				9C08B6B11774B1A400C7FF75 /* baloons.mp4 */,
+				9C08B6B21774B1A400C7FF75 /* bear.mp4 */,
+				9C08B6B31774B1A400C7FF75 /* boat.mp4 */,
+				9C08B6B41774B1A400C7FF75 /* bread.mp4 */,
+				9C08B6B51774B1A500C7FF75 /* bug.mp4 */,
+				9C08B6B61774B1A500C7FF75 /* butterfly.mp4 */,
+				9C08B6B71774B1A500C7FF75 /* cake.mp4 */,
+				9C08B6B81774B1A500C7FF75 /* cat.mp4 */,
+				9C08B6B91774B1A500C7FF75 /* cheburashka.mp4 */,
+				9C08B6BA1774B1A500C7FF75 /* chicks.mp4 */,
+				9C08B6BB1774B1A500C7FF75 /* dandelion.mp4 */,
+				9C08B6BC1774B1A500C7FF75 /* detour.mp4 */,
+				9C08B6BD1774B1A500C7FF75 /* duck.mp4 */,
+				9C08B6BE1774B1A500C7FF75 /* elf.mp4 */,
+				9C08B6BF1774B1A500C7FF75 /* elmtree.mp4 */,
+				9C08B6C01774B1A500C7FF75 /* fish.mp4 */,
+				9C08B6C11774B1A500C7FF75 /* house.mp4 */,
+				9C08B6C21774B1A500C7FF75 /* iodine.mp4 */,
+				9C08B6C31774B1A500C7FF75 /* mouse.mp4 */,
+				9C08B6C41774B1A500C7FF75 /* mushroom.mp4 */,
+				9C08B6C51774B1A500C7FF75 /* notes.mp4 */,
+				9C08B6C61774B1A500C7FF75 /* owl.mp4 */,
+				9C08B6C71774B1A500C7FF75 /* pig.mp4 */,
+				9C08B6C81774B1A500C7FF75 /* porcupine.mp4 */,
+				9C08B6C91774B1A500C7FF75 /* puppy.mp4 */,
+				9C08B6CA1774B1A500C7FF75 /* six.mp4 */,
+				9C08B6CB1774B1A500C7FF75 /* spinner.mp4 */,
+				9C08B6CC1774B1A500C7FF75 /* star.mp4 */,
+				9C08B6CD1774B1A500C7FF75 /* sun.mp4 */,
+				9C08B6CE1774B1A500C7FF75 /* turkey.mp4 */,
+				9C08B6CF1774B1A500C7FF75 /* water.mp4 */,
+				9C08B6D01774B1A500C7FF75 /* watermelon.mp4 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
