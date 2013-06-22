@@ -8,13 +8,15 @@
 
 #import "ViewController.h"
 #import "Letter.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController ()
+@interface ViewController () <AVAudioPlayerDelegate, UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property (strong, nonatomic) Letter *letter;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 - (void)setupLetter;
 
@@ -23,6 +25,8 @@
 
 - (void)addGestureForwardRecognizer;
 - (void)gestureForward:(id)sender;
+
+- (IBAction)playSoundWithTapGesture:(id)sender;
 
 @end
 
@@ -44,7 +48,10 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.letter playSound];
+    NSError *error;
+    self.audioPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:[self.letter soundFileURL] error:&error];
+    self.audioPlayer.delegate = self;
+    [self.audioPlayer play];
 }
 
 - (void)setupLetter
@@ -60,6 +67,7 @@
 {
     UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gestureBack:)];
     
+    recognizer.delegate = self;
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
     
     [self.view addGestureRecognizer:recognizer];
@@ -74,6 +82,7 @@
 {
     UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gestureForward:)];
     
+    recognizer.delegate = self;
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
     
     [self.view addGestureRecognizer:recognizer];
@@ -88,6 +97,18 @@
         viewController.letterIndex = self.letterIndex + 1;
         [self.navigationController pushViewController:viewController animated:YES];
     }
+}
+
+- (IBAction)playSoundWithTapGesture:(id)sender
+{
+    if (!self.audioPlayer.playing) {
+        [self.audioPlayer play];
+    }
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 @end

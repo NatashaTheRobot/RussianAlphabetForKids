@@ -7,12 +7,10 @@
 //
 
 #import "Letter.h"
-#import <AudioToolbox/AudioToolbox.h>
 
 @interface Letter ()
 
 @property (strong, nonatomic) NSString *fileName;
-@property (assign, nonatomic) SystemSoundID systemSoundID;
 
 @end
 
@@ -233,12 +231,10 @@
     return [UIImage imageNamed:imageName];
 }
 
-- (void)playSound
+- (NSURL *)soundFileURL
 {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:self.fileName ofType:@"mp4"];
-    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)fileURL, &_systemSoundID);
-    AudioServicesPlaySystemSound(self.systemSoundID);
+    return [NSURL fileURLWithPath:filePath];
 }
 
 @end

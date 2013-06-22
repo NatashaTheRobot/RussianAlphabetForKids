@@ -17,6 +17,6 @@
 + (NSArray *)allAlphabetLetters;
 
 - (UIImage *)image;
-- (void)playSound;
+- (NSURL *)soundFileURL;
 
 @end
