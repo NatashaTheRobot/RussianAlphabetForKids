@@ -35,7 +35,7 @@
     letter2.letter = @"В";
     letter2.smallLetter = @"в";
     letter2.fileName = @"waves";
-    letter2.word = @"Волны";
+    letter2.word = @"Водичка";
     
     Letter *letter3 = [[Letter alloc] init];
     letter3.letter = @"Г";
@@ -143,7 +143,7 @@
     letter20.letter = @"У";
     letter20.smallLetter = @"у";
     letter20.fileName = @"duck";
-    letter20.word = @"Утка";
+    letter20.word = @"Уточка";
     
     Letter *letter21 = [[Letter alloc] init];
     letter21.letter = @"Ф";
@@ -161,7 +161,7 @@
     letter23.letter = @"Ц";
     letter23.smallLetter = @"ц";
     letter23.fileName = @"chicks";
-    letter23.word = @"Цыплёнки";
+    letter23.word = @"Цыплята";
     
     Letter *letter24 = [[Letter alloc] init];
     letter24.letter = @"Ч";
@@ -203,7 +203,7 @@
     letter30.letter = @"Э";
     letter30.smallLetter = @"э";
     letter30.fileName = @"elf";
-    letter30.word = @"Элф";
+    letter30.word = @"Эльф";
     
     Letter *letter31 = [[Letter alloc] init];
     letter31.letter = @"Ю";
