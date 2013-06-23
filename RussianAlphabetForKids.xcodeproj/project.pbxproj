@@ -100,7 +100,6 @@
 		9C08B7121774B77B00C7FF75 /* detour.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6F21774B77B00C7FF75 /* detour.mp4 */; };
 		9C08B7131774B77B00C7FF75 /* duck.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6F31774B77B00C7FF75 /* duck.mp4 */; };
 		9C08B7141774B77B00C7FF75 /* elf.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6F41774B77B00C7FF75 /* elf.mp4 */; };
-		9C08B7151774B77B00C7FF75 /* elmtree.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6F51774B77B00C7FF75 /* elmtree.mp4 */; };
 		9C08B7161774B77B00C7FF75 /* fish.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6F61774B77B00C7FF75 /* fish.mp4 */; };
 		9C08B7171774B77B00C7FF75 /* house.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6F71774B77B00C7FF75 /* house.mp4 */; };
 		9C08B7181774B77B00C7FF75 /* iodine.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B6F81774B77B00C7FF75 /* iodine.mp4 */; };
@@ -119,6 +118,8 @@
 		9C08B7251774B77B00C7FF75 /* waves.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B7051774B77B00C7FF75 /* waves.mp4 */; };
 		9C08B7261774B77B00C7FF75 /* watermelon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C08B7061774B77B00C7FF75 /* watermelon.mp4 */; };
 		9C08B72A1775CBBC00C7FF75 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C08B7291775CBBB00C7FF75 /* AVFoundation.framework */; };
+		9CFD1752177731FB00C92D55 /* apple.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9CFD1750177731FB00C92D55 /* apple.mp4 */; };
+		9CFD1753177731FB00C92D55 /* elmtree.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9CFD1751177731FB00C92D55 /* elmtree.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,7 +222,6 @@
 		9C08B6F21774B77B00C7FF75 /* detour.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = detour.mp4; sourceTree = "<group>"; };
 		9C08B6F31774B77B00C7FF75 /* duck.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = duck.mp4; sourceTree = "<group>"; };
 		9C08B6F41774B77B00C7FF75 /* elf.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = elf.mp4; sourceTree = "<group>"; };
-		9C08B6F51774B77B00C7FF75 /* elmtree.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = elmtree.mp4; sourceTree = "<group>"; };
 		9C08B6F61774B77B00C7FF75 /* fish.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fish.mp4; sourceTree = "<group>"; };
 		9C08B6F71774B77B00C7FF75 /* house.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.mp4; sourceTree = "<group>"; };
 		9C08B6F81774B77B00C7FF75 /* iodine.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = iodine.mp4; sourceTree = "<group>"; };
@@ -240,6 +240,8 @@
 		9C08B7051774B77B00C7FF75 /* waves.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = waves.mp4; sourceTree = "<group>"; };
 		9C08B7061774B77B00C7FF75 /* watermelon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = watermelon.mp4; sourceTree = "<group>"; };
 		9C08B7291775CBBB00C7FF75 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9CFD1750177731FB00C92D55 /* apple.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = apple.mp4; sourceTree = "<group>"; };
+		9CFD1751177731FB00C92D55 /* elmtree.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = elmtree.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +403,8 @@
 		9C08B6AA1774AA2E00C7FF75 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				9CFD1750177731FB00C92D55 /* apple.mp4 */,
+				9CFD1751177731FB00C92D55 /* elmtree.mp4 */,
 				9C08B6E71774B77B00C7FF75 /* baloons.mp4 */,
 				9C08B6E81774B77B00C7FF75 /* bear.mp4 */,
 				9C08B6E91774B77B00C7FF75 /* boat.mp4 */,
@@ -415,7 +419,6 @@
 				9C08B6F21774B77B00C7FF75 /* detour.mp4 */,
 				9C08B6F31774B77B00C7FF75 /* duck.mp4 */,
 				9C08B6F41774B77B00C7FF75 /* elf.mp4 */,
-				9C08B6F51774B77B00C7FF75 /* elmtree.mp4 */,
 				9C08B6F61774B77B00C7FF75 /* fish.mp4 */,
 				9C08B6F71774B77B00C7FF75 /* house.mp4 */,
 				9C08B6F81774B77B00C7FF75 /* iodine.mp4 */,
@@ -574,7 +577,6 @@
 				9C08B7121774B77B00C7FF75 /* detour.mp4 in Resources */,
 				9C08B7131774B77B00C7FF75 /* duck.mp4 in Resources */,
 				9C08B7141774B77B00C7FF75 /* elf.mp4 in Resources */,
-				9C08B7151774B77B00C7FF75 /* elmtree.mp4 in Resources */,
 				9C08B7161774B77B00C7FF75 /* fish.mp4 in Resources */,
 				9C08B7171774B77B00C7FF75 /* house.mp4 in Resources */,
 				9C08B7181774B77B00C7FF75 /* iodine.mp4 in Resources */,
@@ -592,6 +594,8 @@
 				9C08B7241774B77B00C7FF75 /* turkey.mp4 in Resources */,
 				9C08B7251774B77B00C7FF75 /* waves.mp4 in Resources */,
 				9C08B7261774B77B00C7FF75 /* watermelon.mp4 in Resources */,
+				9CFD1752177731FB00C92D55 /* apple.mp4 in Resources */,
+				9CFD1753177731FB00C92D55 /* elmtree.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
