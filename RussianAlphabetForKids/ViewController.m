@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Letter.h"
 #import <AVFoundation/AVFoundation.h>
+#import "LetterNavigationController.h"
 
 @interface ViewController () <AVAudioPlayerDelegate, UIGestureRecognizerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -104,7 +105,20 @@
 
 - (void)gestureBack:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (self.letterIndex - 1 >= 0) {
+        
+        LetterNavigationController *navigationController = (LetterNavigationController *)self.navigationController;
+        
+        if (![navigationController.viewControllers containsObject:navigationController.allLetterViewControllers[self.letterIndex - 1]]) {
+            NSMutableArray *viewControllers = [navigationController.viewControllers mutableCopy];
+            [viewControllers insertObject:navigationController.allLetterViewControllers[self.letterIndex - 1] atIndex:(self.letterIndex - 1)];
+            [navigationController setViewControllers:[NSArray arrayWithArray:viewControllers]];
+        }
+        
+        [navigationController popToViewController:navigationController.viewControllers[self.letterIndex - 1]
+                                         animated:YES];
+        
+    }
 }
 
 - (void)addGestureForwardRecognizer
@@ -119,12 +133,14 @@
 
 - (void)gestureForward:(id)sender
 {
+    LetterNavigationController *navigationController = (LetterNavigationController *)self.navigationController;
+    
     if (self.letterIndex == 32) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [navigationController popToViewController:navigationController.viewControllers[0]
+                                              animated:YES];
     } else {
-        ViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ViewController class])];
-        viewController.letterIndex = self.letterIndex + 1;
-        [self.navigationController pushViewController:viewController animated:YES];
+        [navigationController pushViewController:navigationController.allLetterViewControllers[self.letterIndex + 1]
+                                             animated:YES];
     }
 }
 
@@ -164,5 +180,8 @@
     
     return cell;
 }
+
+// set selected letter on collection view
+// scroll to the selected cell
 
 @end
