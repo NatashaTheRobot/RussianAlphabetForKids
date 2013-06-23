@@ -10,15 +10,17 @@
 #import "Letter.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController () <AVAudioPlayerDelegate, UIGestureRecognizerDelegate>
+@interface ViewController () <AVAudioPlayerDelegate, UIGestureRecognizerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property (strong, nonatomic) Letter *letter;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 - (void)setupLetter;
+- (void)setupCollectionViewBackground;
 
 - (void)addGestureBackRecognizer;
 - (void)gestureBack:(id)sender;
@@ -35,9 +37,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navBar.png"] forBarMetrics:UIBarMetricsDefault];
-    self.navigationItem.hidesBackButton = YES;
+    
+    [self setupCollectionViewBackground];
+    
+    self.view.layer.cornerRadius = 7;
+    self.view.layer.masksToBounds = YES;
     
     [self setupLetter];
     
@@ -74,6 +78,18 @@
     self.imageView.image = [self.letter image];
     self.navigationItem.title = [NSString stringWithFormat:@"%@ %@", self.letter.letter, self.letter.smallLetter];
 }
+
+- (void)setupCollectionViewBackground
+{
+    UIImage *backgroundImage = [UIImage imageNamed:@"background.png"];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
+    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, backgroundImage.size.width, backgroundImage.size.width)];
+    [backgroundView addSubview:backgroundImageView];
+    
+    self.collectionView.backgroundView = backgroundView;
+}
+
+# pragma mark - Gestures
 
 - (void)addGestureBackRecognizer
 {
@@ -121,6 +137,31 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
     return YES;
+}
+
+# pragma mark - CollectionView Data Source
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [[Letter allAlphabetLetters] count];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"letter" forIndexPath:indexPath];
+    
+    Letter *letter = [Letter allAlphabetLetters][indexPath.row];
+    
+    ((UIImageView *)[cell viewWithTag:100]).image = [letter image];
+    
+    cell.layer.cornerRadius = 7;
+    
+    return cell;
 }
 
 @end
