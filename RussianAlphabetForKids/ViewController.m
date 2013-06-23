@@ -139,6 +139,13 @@
         [navigationController popToViewController:navigationController.viewControllers[0]
                                               animated:YES];
     } else {
+        
+        if ([navigationController.viewControllers containsObject:navigationController.allLetterViewControllers[self.letterIndex + 1]]) {
+            NSMutableArray *viewControllers = [navigationController.viewControllers mutableCopy];
+            [viewControllers removeObject:navigationController.allLetterViewControllers[self.letterIndex + 1]];
+            [navigationController setViewControllers:[NSArray arrayWithArray:viewControllers]];
+        }
+        
         [navigationController pushViewController:navigationController.allLetterViewControllers[self.letterIndex + 1]
                                              animated:YES];
     }
