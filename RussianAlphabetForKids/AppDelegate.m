@@ -17,7 +17,7 @@
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIFont fontWithName:@"Avenir-Bold" size:17.0],
       UITextAttributeFont, nil]];
-    
+        
     // Override point for customization after application launch.
     return YES;
 }
