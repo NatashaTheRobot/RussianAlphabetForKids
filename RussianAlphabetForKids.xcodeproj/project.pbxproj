@@ -207,7 +207,6 @@
 		9C08B6AB1774AC0500C7FF75 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9C08B6AC1774AC0600C7FF75 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9C08B6AD1774AC0700C7FF75 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9C08B6D11774B3B500C7FF75 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9C08B6E71774B77B00C7FF75 /* baloons.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = baloons.mp4; sourceTree = "<group>"; };
 		9C08B6E81774B77B00C7FF75 /* bear.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bear.mp4; sourceTree = "<group>"; };
 		9C08B6E91774B77B00C7FF75 /* boat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = boat.mp4; sourceTree = "<group>"; };
@@ -240,7 +239,6 @@
 		9C08B7041774B77B00C7FF75 /* turkey.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = turkey.mp4; sourceTree = "<group>"; };
 		9C08B7051774B77B00C7FF75 /* waves.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = waves.mp4; sourceTree = "<group>"; };
 		9C08B7061774B77B00C7FF75 /* watermelon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = watermelon.mp4; sourceTree = "<group>"; };
-		9C08B7271775CAA200C7FF75 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		9C08B7291775CBBB00C7FF75 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -280,8 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				9C08B7291775CBBB00C7FF75 /* AVFoundation.framework */,
-				9C08B7271775CAA200C7FF75 /* MediaPlayer.framework */,
-				9C08B6D11774B3B500C7FF75 /* AudioToolbox.framework */,
 				9C08B5F01774877D00C7FF75 /* UIKit.framework */,
 				9C08B5F21774877D00C7FF75 /* Foundation.framework */,
 				9C08B5F41774877D00C7FF75 /* CoreGraphics.framework */,
@@ -738,6 +734,7 @@
 				9C08B6121774877D00C7FF75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

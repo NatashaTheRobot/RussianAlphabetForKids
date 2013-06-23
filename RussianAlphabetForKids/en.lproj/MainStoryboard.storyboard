@@ -37,7 +37,7 @@
                                     <constraint firstAttribute="height" constant="101" id="Jaz-2A-jy7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="49"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.31684580714717647" green="1" blue="0.52206805089824804" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
