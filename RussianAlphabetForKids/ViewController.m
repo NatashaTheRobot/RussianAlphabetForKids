@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView *letterView;
 
 @property (strong, nonatomic) Letter *letter;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
@@ -98,7 +99,7 @@
     recognizer.delegate = self;
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
     
-    [self.view addGestureRecognizer:recognizer];
+    [self.letterView addGestureRecognizer:recognizer];
 }
 
 - (void)gestureBack:(id)sender
@@ -113,7 +114,7 @@
     recognizer.delegate = self;
     [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
     
-    [self.view addGestureRecognizer:recognizer];
+    [self.letterView addGestureRecognizer:recognizer];
 }
 
 - (void)gestureForward:(id)sender
