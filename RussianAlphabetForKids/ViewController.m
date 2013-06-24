@@ -93,6 +93,44 @@
 
 # pragma mark - Gestures
 
+- (void)showPreviousLetterWithIndex:(NSInteger)index
+{
+    if (index >= 0) {
+        
+        LetterNavigationController *navigationController = (LetterNavigationController *)self.navigationController;
+        
+        if (![navigationController.viewControllers containsObject:navigationController.allLetterViewControllers[index]]) {
+            NSMutableArray *viewControllers = [navigationController.viewControllers mutableCopy];
+            [viewControllers insertObject:navigationController.allLetterViewControllers[index] atIndex:navigationController.viewControllers.count];
+            [navigationController setViewControllers:[NSArray arrayWithArray:viewControllers]];
+        }
+        
+        [navigationController popToViewController:navigationController.viewControllers[(navigationController.viewControllers.count - 1)]
+                                         animated:YES];
+        
+    }
+}
+
+- (void)showNextLetterWithIndex:(NSInteger)index
+{
+    LetterNavigationController *navigationController = (LetterNavigationController *)self.navigationController;
+    
+    if (self.letterIndex == 32) {
+        [navigationController popToViewController:navigationController.viewControllers[0]
+                                         animated:YES];
+    } else {
+        
+        if ([navigationController.viewControllers containsObject:navigationController.allLetterViewControllers[index]]) {
+            NSMutableArray *viewControllers = [navigationController.viewControllers mutableCopy];
+            [viewControllers removeObject:navigationController.allLetterViewControllers[index]];
+            [navigationController setViewControllers:[NSArray arrayWithArray:viewControllers]];
+        }
+        
+        [navigationController pushViewController:navigationController.allLetterViewControllers[index]
+                                        animated:YES];
+    }
+}
+
 - (void)addGestureBackRecognizer
 {
     UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gestureBack:)];
@@ -105,20 +143,8 @@
 
 - (void)gestureBack:(id)sender
 {
-    if (self.letterIndex - 1 >= 0) {
-        
-        LetterNavigationController *navigationController = (LetterNavigationController *)self.navigationController;
-        
-        if (![navigationController.viewControllers containsObject:navigationController.allLetterViewControllers[self.letterIndex - 1]]) {
-            NSMutableArray *viewControllers = [navigationController.viewControllers mutableCopy];
-            [viewControllers insertObject:navigationController.allLetterViewControllers[self.letterIndex - 1] atIndex:(self.letterIndex - 1)];
-            [navigationController setViewControllers:[NSArray arrayWithArray:viewControllers]];
-        }
-        
-        [navigationController popToViewController:navigationController.viewControllers[self.letterIndex - 1]
-                                         animated:YES];
-        
-    }
+    [self showPreviousLetterWithIndex:self.letterIndex - 1];
+
 }
 
 - (void)addGestureForwardRecognizer
@@ -133,22 +159,7 @@
 
 - (void)gestureForward:(id)sender
 {
-    LetterNavigationController *navigationController = (LetterNavigationController *)self.navigationController;
-    
-    if (self.letterIndex == 32) {
-        [navigationController popToViewController:navigationController.viewControllers[0]
-                                              animated:YES];
-    } else {
-        
-        if ([navigationController.viewControllers containsObject:navigationController.allLetterViewControllers[self.letterIndex + 1]]) {
-            NSMutableArray *viewControllers = [navigationController.viewControllers mutableCopy];
-            [viewControllers removeObject:navigationController.allLetterViewControllers[self.letterIndex + 1]];
-            [navigationController setViewControllers:[NSArray arrayWithArray:viewControllers]];
-        }
-        
-        [navigationController pushViewController:navigationController.allLetterViewControllers[self.letterIndex + 1]
-                                             animated:YES];
-    }
+    [self showNextLetterWithIndex:self.letterIndex + 1];
 }
 
 - (IBAction)playSoundWithTapGesture:(id)sender
@@ -188,7 +199,20 @@
     return cell;
 }
 
+#pragma mark - CollectionView Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row > self.letterIndex) {
+        [self showNextLetterWithIndex:indexPath.row];
+    } else {
+        [self showPreviousLetterWithIndex:indexPath.row];
+    }
+}
+
+
 // set selected letter on collection view
 // scroll to the selected cell
+// can't insert item beyond bounds! when poping on new view
 
 @end
