@@ -104,10 +104,13 @@
     self.selectedLetter = self.letters[indexPath.row];
     
     if (collectionView == self.detailCollectionView) {
-        [self.selectedLetter playSound];
+//        [self.selectedLetter playSound];
     } else {
         [self.detailCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+        
     }
+    
+    [self.selectedLetter playSound];
 }
 
 @end
