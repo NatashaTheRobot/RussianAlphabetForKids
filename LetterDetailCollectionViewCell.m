@@ -14,11 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-- (void)setupAudio;
-
-//- (IBAction)playSoundWithTapGesture:(id)sender;
-
 @end
 
 @implementation LetterDetailCollectionViewCell
@@ -38,24 +33,7 @@
     _letter = letter;
     self.imageView.image = [letter image];
     self.wordLabel.text = letter.word;
-    [self setupAudio];
 }
 
-- (void)setupAudio
-{
-    NSError *error;
-    self.audioPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:[self.letter soundFileURL] error:&error];
-    self.audioPlayer.delegate = self;
-}
-
-//- (IBAction)playSoundWithTapGesture:(id)sender
-//{
-//    [self.audioPlayer play];
-//}
-
-// play sound when view appears
-//if (self.audioPlayer.isPlaying) {
-//    [self.audioPlayer stop];
-//}
 
 @end

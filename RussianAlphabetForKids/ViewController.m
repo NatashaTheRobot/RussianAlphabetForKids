@@ -14,15 +14,28 @@
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-
 @property (weak, nonatomic) IBOutlet UICollectionView *navigationCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *detailCollectionView;
+
+@property (strong, nonatomic) NSArray *letters;
+@property (strong, nonatomic) Letter *selectedLetter;
 
 - (void)setupNavigationCollectionViewBackground;
 
 @end
 
 @implementation ViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        self.letters = [Letter allAlphabetLetters];
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -55,7 +68,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [[Letter allAlphabetLetters] count];
+    return self.letters.count;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -68,7 +81,7 @@
     static NSString *cellIdentifier = @"letter";
     UICollectionViewCell *cell;
     
-    Letter *letter = [Letter allAlphabetLetters][indexPath.row];
+    Letter *letter = self.letters[indexPath.row];
     
     if (collectionView == self.detailCollectionView) {
         cell = [self.detailCollectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
@@ -85,7 +98,11 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    self.selectedLetter = self.letters[indexPath.row];
+    
+    if (collectionView == self.detailCollectionView) {
+        [self.selectedLetter playSound];
+    }
 }
 
 

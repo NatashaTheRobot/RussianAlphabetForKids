@@ -7,15 +7,64 @@
 //
 
 #import "Letter.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface Letter ()
+@interface Letter () <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) NSString *fileName;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 @end
 
 
 @implementation Letter
+
+- (id)init
+{
+    self = [super init];
+    
+    if (self) {
+        [self setupAudio];
+    }
+    
+    return self;
+}
+
+- (void)setFileName:(NSString *)fileName
+{
+    _fileName = fileName;
+    [self setupAudio];
+    
+}
+
+- (void)setupAudio
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:self.fileName ofType:@"mp4"];
+    NSURL *soundFileURL  = [NSURL fileURLWithPath:filePath];
+    
+    NSError *error;
+    self.audioPlayer =[[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&error];
+    self.audioPlayer.delegate = self;
+    [self.audioPlayer prepareToPlay];
+}
+
+- (void)playSound
+{
+    [self.audioPlayer play];
+}
+
+- (void)stopSound
+{
+    if ([self.audioPlayer isPlaying]) {
+        [self.audioPlayer stop];
+    }
+}
+
+- (UIImage *)image
+{
+    NSString *imageName = [NSString stringWithFormat:@"%@.png", self.fileName];
+    return [UIImage imageNamed:imageName];
+}
 
 + (NSArray *)allAlphabetLetters
 {
@@ -223,18 +272,6 @@
              letter18, letter19, letter20, letter21, letter22, letter23,
              letter24, letter25, letter26, letter27, letter28, letter29,
              letter30, letter31, letter32];
-}
-
-- (UIImage *)image
-{
-    NSString *imageName = [NSString stringWithFormat:@"%@.png", self.fileName];
-    return [UIImage imageNamed:imageName];
-}
-
-- (NSURL *)soundFileURL
-{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:self.fileName ofType:@"mp4"];
-    return [NSURL fileURLWithPath:filePath];
 }
 
 @end
