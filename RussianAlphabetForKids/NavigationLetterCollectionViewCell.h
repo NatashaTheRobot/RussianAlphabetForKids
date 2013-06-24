@@ -13,6 +13,4 @@
 
 @property (strong, nonatomic) Letter *letter;
 
-- (void)clearSelection;
-
 @end

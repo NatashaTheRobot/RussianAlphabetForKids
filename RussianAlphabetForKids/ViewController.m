@@ -43,6 +43,9 @@
     
     [self setupNavigationCollectionViewBackground];
     
+    self.detailCollectionView.allowsMultipleSelection = NO;
+    self.navigationCollectionView.allowsMultipleSelection = NO;
+    
     self.view.layer.cornerRadius = 7;
     self.view.layer.masksToBounds = YES;
     
@@ -103,25 +106,8 @@
     if (collectionView == self.detailCollectionView) {
         [self.selectedLetter playSound];
     } else {
-        // add border
         [self.detailCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     }
 }
-
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (collectionView == self.detailCollectionView) {
-        Letter *letter = self.letters[indexPath.row];
-        [letter stopSound];
-    } else {
-        NavigationLetterCollectionViewCell *cell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
-        [cell clearSelection];
-    }
-}
-
-
-// set selected letter on collection view
-// scroll to the selected cell
-// can't insert item beyond bounds! when poping on new view
 
 @end

@@ -38,16 +38,14 @@
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
-    self.layer.borderWidth = 1;
-    self.layer.borderColor = [[UIColor blueColor] CGColor];
+    
+    if (selected) {
+        self.layer.borderWidth = 1;
+        self.layer.borderColor = [[UIColor blueColor] CGColor];
+    } else {
+        self.layer.borderWidth = 0;
+        self.layer.borderColor = [[UIColor clearColor] CGColor];
+    }
 }
-
-- (void)clearSelection
-{
-    self.layer.borderWidth = 0;
-    self.layer.borderColor = [[UIColor clearColor] CGColor];
-}
-
-
 
 @end
