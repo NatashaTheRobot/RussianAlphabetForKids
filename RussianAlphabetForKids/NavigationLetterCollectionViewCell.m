@@ -35,4 +35,19 @@
     self.imageView.image = [letter image];
 }
 
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    self.layer.borderWidth = 1;
+    self.layer.borderColor = [[UIColor blueColor] CGColor];
+}
+
+- (void)clearSelection
+{
+    self.layer.borderWidth = 0;
+    self.layer.borderColor = [[UIColor clearColor] CGColor];
+}
+
+
+
 @end

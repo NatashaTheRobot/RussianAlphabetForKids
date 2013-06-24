@@ -102,6 +102,20 @@
     
     if (collectionView == self.detailCollectionView) {
         [self.selectedLetter playSound];
+    } else {
+        // add border
+        [self.detailCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (collectionView == self.detailCollectionView) {
+        Letter *letter = self.letters[indexPath.row];
+        [letter stopSound];
+    } else {
+        NavigationLetterCollectionViewCell *cell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
+        [cell clearSelection];
     }
 }
 
