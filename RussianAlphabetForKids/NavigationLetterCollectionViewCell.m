@@ -42,11 +42,9 @@
     if (selected) {
         self.layer.borderWidth = 1;
         self.layer.borderColor = [[UIColor blueColor] CGColor];
-        [self.letter playSound];
     } else {
         self.layer.borderWidth = 0;
         self.layer.borderColor = [[UIColor clearColor] CGColor];
-        [self.letter stopSound];
     }
 }
 

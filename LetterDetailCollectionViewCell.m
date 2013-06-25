@@ -39,7 +39,9 @@
 {
     [super setSelected:selected];
     
-    if (!selected) {
+    if (selected) {
+        [self.letter playSound];
+    } else {
         [self.letter stopSound];
     }
 }

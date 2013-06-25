@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *detailCollectionView;
 
 @property (strong, nonatomic) NSArray *letters;
-@property (strong, nonatomic) Letter *selectedLetter;
 
 - (void)setupNavigationCollectionViewBackground;
 
@@ -101,41 +100,46 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[self.navigationCollectionView indexPathsForSelectedItems] enumerateObjectsUsingBlock:^(NSIndexPath *indexPath, NSUInteger idx, BOOL *stop) {
-        NavigationLetterCollectionViewCell *selectedCell = (NavigationLetterCollectionViewCell  *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
-        selectedCell.selected = NO;
-    }];
-    
-    self.selectedLetter = self.letters[indexPath.row];
-    
-    if (collectionView == self.detailCollectionView) {
-//        [self.selectedLetter playSound];
-    } else {
-        [self.detailCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    if (collectionView == self.navigationCollectionView) {
+        [self.navigationCollectionView.visibleCells enumerateObjectsUsingBlock:^(NavigationLetterCollectionViewCell *cell, NSUInteger idx, BOOL *stop) {
+            cell.selected = NO;
+        }];
         
+        LetterDetailCollectionViewCell *cell = (LetterDetailCollectionViewCell *)[self.detailCollectionView cellForItemAtIndexPath:indexPath];
+        cell.selected = YES;
+        
+        [self.detailCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     }
-    
-    [self.selectedLetter playSound];
 }
 
 #pragma mark - Scroll View Delegate
 
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+{
+    if (scrollView == self.detailCollectionView) {
+        [self.detailCollectionView.visibleCells enumerateObjectsUsingBlock:^(LetterDetailCollectionViewCell *cell, NSUInteger idx, BOOL *stop) {
+            cell.selected = NO;
+        }];
+        
+        [self.navigationCollectionView.visibleCells enumerateObjectsUsingBlock:^(NavigationLetterCollectionViewCell *cell, NSUInteger idx, BOOL *stop) {
+            cell.selected = NO;
+        }];
+    }
+}
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     if (scrollView == self.detailCollectionView) {
-        [[self.navigationCollectionView indexPathsForSelectedItems] enumerateObjectsUsingBlock:^(NSIndexPath *indexPath, NSUInteger idx, BOOL *stop) {
-            NavigationLetterCollectionViewCell *selectedCell = (NavigationLetterCollectionViewCell  *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
-            selectedCell.selected = NO;
-        }];
-        
         LetterDetailCollectionViewCell *letterDetailCell = self.detailCollectionView.visibleCells[0];
+        
         NSIndexPath *indexPath = [self.detailCollectionView indexPathForCell:letterDetailCell];
         
         NavigationLetterCollectionViewCell *navigationCell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
         navigationCell.selected = YES;
-        self.selectedLetter = navigationCell.letter;
         
         [self.navigationCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+        
+        [letterDetailCell.letter playSound];
     }
 }
 
