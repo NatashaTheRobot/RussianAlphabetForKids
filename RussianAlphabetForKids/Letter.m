@@ -53,7 +53,10 @@
 
 - (void)playSound
 {
-    [self.audioPlayer play];
+    if (![self.audioPlayer isPlaying]) {
+        self.audioPlayer.currentTime = 0;
+        [self.audioPlayer play];
+    }
 }
 
 - (void)stopSound

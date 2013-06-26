@@ -35,16 +35,5 @@
     self.wordLabel.text = letter.word;
 }
 
-- (void)setSelected:(BOOL)selected
-{
-    [super setSelected:selected];
-    
-    if (selected) {
-        [self.letter playSound];
-    } else {
-        [self.letter stopSound];
-    }
-}
-
 
 @end
