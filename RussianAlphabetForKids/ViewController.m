@@ -34,6 +34,7 @@
     
     if (self) {
         self.letters = [Letter allAlphabetLetters];
+        self.selectedLetter = self.letters[0];
         self.detailViewScrolling = NO;
     }
     
@@ -51,6 +52,8 @@
     
     self.view.layer.cornerRadius = 7;
     self.view.layer.masksToBounds = YES;
+    
+    [self.selectedLetter playSound];
     
 }
 
@@ -95,6 +98,11 @@
     } else {
         cell = [self.navigationCollectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
         ((NavigationLetterCollectionViewCell *)cell).letter = letter;
+        if (letter == self.selectedLetter) {
+            cell.selected = YES;
+        } else {
+            cell.selected = NO;
+        }
     }
     
     return cell;
