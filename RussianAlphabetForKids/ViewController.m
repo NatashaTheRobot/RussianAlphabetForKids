@@ -143,13 +143,14 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if (collectionView == self.detailCollectionView && !self.detailViewScrolling) {
+        NavigationLetterCollectionViewCell *oldNavCell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
+        oldNavCell.selected = NO;
+        
+        [self.selectedLetter stopSound];
         
         if (self.detailCollectionView.visibleCells.count > 0) {
-            NavigationLetterCollectionViewCell *oldNavCell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
-            oldNavCell.selected = NO;
-            
-            [self.selectedLetter stopSound];
             LetterDetailCollectionViewCell *detailCell = self.detailCollectionView.visibleCells[0];
             
             self.selectedLetter = detailCell.letter;
