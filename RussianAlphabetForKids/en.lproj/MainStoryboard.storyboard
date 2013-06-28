@@ -12,10 +12,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N1P-su-nM3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="WZT-f8-wZl"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="fwk-Dg-p2p">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="9" maxX="15" maxY="11"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="letter" id="SQ9-ed-mox" customClass="NavigationLetterCollectionViewCell">
+                                        <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="EhE-Up-hFk">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Afb-RI-lxP"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="EhE-Up-hFk" firstAttribute="trailing" secondItem="SQ9-ed-mox" secondAttribute="trailing" type="default" id="4ja-92-oF7"/>
+                                            <constraint firstItem="EhE-Up-hFk" firstAttribute="leading" secondItem="SQ9-ed-mox" secondAttribute="leading" type="default" id="RlS-fc-vIN"/>
+                                            <constraint firstItem="EhE-Up-hFk" firstAttribute="top" secondItem="SQ9-ed-mox" secondAttribute="top" type="default" id="YeA-4m-ycR"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="EhE-Up-hFk" id="Ik2-Kd-2Bc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="IRx-Gy-RsR" id="BIs-T4-kYZ"/>
+                                    <outlet property="delegate" destination="IRx-Gy-RsR" id="pIm-j4-X47"/>
+                                </connections>
+                            </collectionView>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mf5-tD-Kyk">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="475" id="Od2-RN-lf1"/>
+                                    <constraint firstAttribute="height" constant="495" id="hmc-bU-yLH"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="RHi-uf-KcJ">
                                     <size key="itemSize" width="320" height="475"/>
@@ -25,7 +67,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="letter" id="3Fm-uC-DgU" customClass="LetterDetailCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                                        <rect key="frame" x="0.0" y="10" width="320" height="475"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
@@ -65,45 +107,6 @@
                                 <connections>
                                     <outlet property="dataSource" destination="IRx-Gy-RsR" id="Ka5-Kr-qdx"/>
                                     <outlet property="delegate" destination="IRx-Gy-RsR" id="DFr-HC-R1L"/>
-                                </connections>
-                            </collectionView>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N1P-su-nM3">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="WZT-f8-wZl"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="fwk-Dg-p2p">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="15" minY="10" maxX="15" maxY="10"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="letter" id="SQ9-ed-mox" customClass="NavigationLetterCollectionViewCell">
-                                        <rect key="frame" x="15" y="11" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="EhE-Up-hFk"/>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="EhE-Up-hFk" firstAttribute="trailing" secondItem="SQ9-ed-mox" secondAttribute="trailing" type="default" id="6sD-qs-tGu"/>
-                                            <constraint firstItem="EhE-Up-hFk" firstAttribute="top" secondItem="SQ9-ed-mox" secondAttribute="top" type="default" id="HK2-EI-3dr"/>
-                                            <constraint firstItem="EhE-Up-hFk" firstAttribute="bottom" secondItem="SQ9-ed-mox" secondAttribute="bottom" type="default" id="KMa-4K-oOU"/>
-                                            <constraint firstItem="EhE-Up-hFk" firstAttribute="leading" secondItem="SQ9-ed-mox" secondAttribute="leading" type="default" id="bGa-Z3-nJQ"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="imageView" destination="EhE-Up-hFk" id="Ik2-Kd-2Bc"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="IRx-Gy-RsR" id="BIs-T4-kYZ"/>
-                                    <outlet property="delegate" destination="IRx-Gy-RsR" id="pIm-j4-X47"/>
                                 </connections>
                             </collectionView>
                         </subviews>

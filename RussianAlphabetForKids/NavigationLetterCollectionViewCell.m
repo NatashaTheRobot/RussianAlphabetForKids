@@ -40,9 +40,8 @@
     [super setSelected:selected];
     
     if (selected) {
-        self.layer.borderWidth = 2;
-        self.layer.borderColor = [[UIColor orangeColor] CGColor];
-//        self.layer.borderColor = [[UIColor colorWithRed:55/255.0 green:215/255.0 blue:232/255.0 alpha:1] CGColor];
+        self.layer.borderWidth = 1;
+        self.layer.borderColor = [[UIColor colorWithRed:105/255.0 green:62/255.0 blue:255/255.0 alpha:1] CGColor];
     } else {
         self.layer.borderWidth = 0;
         self.layer.borderColor = [[UIColor clearColor] CGColor];

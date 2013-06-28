@@ -50,6 +50,13 @@
     self.detailCollectionView.allowsMultipleSelection = NO;
     self.navigationCollectionView.allowsMultipleSelection = NO;
     
+    self.detailCollectionView.layer.shadowColor = [[UIColor colorWithRed:55/255.0 green:215/255.0 blue:232/255.0 alpha:1] CGColor];
+    self.detailCollectionView.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    self.detailCollectionView.layer.shadowRadius = 1.0f;
+    self.detailCollectionView.layer.shadowOpacity = 1.0f;
+    self.detailCollectionView.layer.masksToBounds = NO;
+    
+    
     self.view.layer.cornerRadius = 7;
     self.view.layer.masksToBounds = YES;
     
