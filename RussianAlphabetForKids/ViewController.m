@@ -143,23 +143,24 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     if (collectionView == self.detailCollectionView && !self.detailViewScrolling) {
-        NavigationLetterCollectionViewCell *oldNavCell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
-        oldNavCell.selected = NO;
         
-        [self.selectedLetter stopSound];
-        
-        LetterDetailCollectionViewCell *detailCell = self.detailCollectionView.visibleCells[0];
-        
-        self.selectedLetter = detailCell.letter;
-        [self.selectedLetter playSound];
-        
-        NSIndexPath *newIndexPath = [self.detailCollectionView indexPathForCell:detailCell];
-        [self.navigationCollectionView scrollToItemAtIndexPath:newIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-        
-        NavigationLetterCollectionViewCell *navCell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:newIndexPath];
-        navCell.selected = YES;
+        if (self.detailCollectionView.visibleCells.count > 0) {
+            NavigationLetterCollectionViewCell *oldNavCell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
+            oldNavCell.selected = NO;
+            
+            [self.selectedLetter stopSound];
+            LetterDetailCollectionViewCell *detailCell = self.detailCollectionView.visibleCells[0];
+            
+            self.selectedLetter = detailCell.letter;
+            [self.selectedLetter playSound];
+            
+            NSIndexPath *newIndexPath = [self.detailCollectionView indexPathForCell:detailCell];
+            [self.navigationCollectionView scrollToItemAtIndexPath:newIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+            
+            NavigationLetterCollectionViewCell *navCell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:newIndexPath];
+            navCell.selected = YES;
+        }
     }
 
 }
