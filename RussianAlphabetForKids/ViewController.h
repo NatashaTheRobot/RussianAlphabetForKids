@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Natasha Murashev. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : GAITrackedViewController
 
 @end

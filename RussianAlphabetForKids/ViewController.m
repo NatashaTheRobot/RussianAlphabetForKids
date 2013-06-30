@@ -45,6 +45,8 @@
 {
     [super viewDidLoad];
     
+    self.trackedViewName = [NSString stringWithFormat:@"Letter View Controller. Current letter: %@", self.selectedLetter];
+    
     [self setupNavigationCollectionViewBackground];
     
     self.detailCollectionView.allowsMultipleSelection = NO;
@@ -62,6 +64,11 @@
     
     [self.selectedLetter playSound];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.trackedViewName = [NSString stringWithFormat:@"Letter View Controller. Current letter: %@", self.selectedLetter];
 }
 
 - (void)setupNavigationCollectionViewBackground
@@ -145,12 +152,14 @@
 {
     
     if (collectionView == self.detailCollectionView && !self.detailViewScrolling) {
+        
         NavigationLetterCollectionViewCell *oldNavCell = (NavigationLetterCollectionViewCell *)[self.navigationCollectionView cellForItemAtIndexPath:indexPath];
         oldNavCell.selected = NO;
         
-        [self.selectedLetter stopSound];
-        
         if (self.detailCollectionView.visibleCells.count > 0) {
+            
+            [self.selectedLetter stopSound];
+            
             LetterDetailCollectionViewCell *detailCell = self.detailCollectionView.visibleCells[0];
             
             self.selectedLetter = detailCell.letter;

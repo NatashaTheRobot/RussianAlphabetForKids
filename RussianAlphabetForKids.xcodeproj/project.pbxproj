@@ -126,6 +126,10 @@
 		9CFD177E177DD64A00C92D55 /* waves.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFD177D177DD64A00C92D55 /* waves.png */; };
 		9CFD1784177DD9EB00C92D55 /* watermelon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFD1783177DD9EB00C92D55 /* watermelon@2x.png */; };
 		9CFD1786177DDA0B00C92D55 /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CFD1785177DDA0B00C92D55 /* watermelon.png */; };
+		9CFD178F178080AD00C92D55 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFD178D178080AD00C92D55 /* libGoogleAnalytics.a */; };
+		9CFD1790178080AE00C92D55 /* libGoogleAnalytics_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFD178E178080AD00C92D55 /* libGoogleAnalytics_debug.a */; };
+		9CFD17921780812E00C92D55 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFD17911780812E00C92D55 /* CoreData.framework */; };
+		9CFD17941780813800C92D55 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFD17931780813800C92D55 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -256,6 +260,15 @@
 		9CFD177D177DD64A00C92D55 /* waves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waves.png; sourceTree = "<group>"; };
 		9CFD1783177DD9EB00C92D55 /* watermelon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "watermelon@2x.png"; sourceTree = "<group>"; };
 		9CFD1785177DDA0B00C92D55 /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelon.png; sourceTree = "<group>"; };
+		9CFD1788178080AD00C92D55 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		9CFD1789178080AD00C92D55 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		9CFD178A178080AD00C92D55 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		9CFD178B178080AD00C92D55 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
+		9CFD178C178080AD00C92D55 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
+		9CFD178D178080AD00C92D55 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		9CFD178E178080AD00C92D55 /* libGoogleAnalytics_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics_debug.a; sourceTree = "<group>"; };
+		9CFD17911780812E00C92D55 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9CFD17931780813800C92D55 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,11 +276,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFD17941780813800C92D55 /* SystemConfiguration.framework in Frameworks */,
+				9CFD17921780812E00C92D55 /* CoreData.framework in Frameworks */,
 				9CFD17651777407800C92D55 /* QuartzCore.framework in Frameworks */,
 				9C08B72A1775CBBC00C7FF75 /* AVFoundation.framework in Frameworks */,
 				9C08B5F11774877D00C7FF75 /* UIKit.framework in Frameworks */,
 				9C08B5F31774877D00C7FF75 /* Foundation.framework in Frameworks */,
 				9C08B5F51774877D00C7FF75 /* CoreGraphics.framework in Frameworks */,
+				9CFD178F178080AD00C92D55 /* libGoogleAnalytics.a in Frameworks */,
+				9CFD1790178080AE00C92D55 /* libGoogleAnalytics_debug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +311,8 @@
 		9C08B5EF1774877D00C7FF75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CFD17931780813800C92D55 /* SystemConfiguration.framework */,
+				9CFD17911780812E00C92D55 /* CoreData.framework */,
 				9CFD17641777407800C92D55 /* QuartzCore.framework */,
 				9C08B7291775CBBB00C7FF75 /* AVFoundation.framework */,
 				9C08B5F01774877D00C7FF75 /* UIKit.framework */,
@@ -319,6 +338,7 @@
 				9CFD177117787AD100C92D55 /* NavigationLetterCollectionViewCell.m */,
 				9C08B6171774894600C7FF75 /* Images */,
 				9C08B6AA1774AA2E00C7FF75 /* Sounds */,
+				9CFD1787178080AD00C92D55 /* GoogleAnalytics */,
 				9C08B5F71774877D00C7FF75 /* Supporting Files */,
 			);
 			path = RussianAlphabetForKids;
@@ -461,6 +481,21 @@
 				9C08B7061774B77B00C7FF75 /* watermelon.mp4 */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		9CFD1787178080AD00C92D55 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				9CFD1788178080AD00C92D55 /* GAI.h */,
+				9CFD1789178080AD00C92D55 /* GAITrackedViewController.h */,
+				9CFD178A178080AD00C92D55 /* GAITracker.h */,
+				9CFD178B178080AD00C92D55 /* GAITransaction.h */,
+				9CFD178C178080AD00C92D55 /* GAITransactionItem.h */,
+				9CFD178D178080AD00C92D55 /* libGoogleAnalytics.a */,
+				9CFD178E178080AD00C92D55 /* libGoogleAnalytics_debug.a */,
+			);
+			name = GoogleAnalytics;
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -731,6 +766,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RussianAlphabetForKids/RussianAlphabetForKids-Prefix.pch";
 				INFOPLIST_FILE = "RussianAlphabetForKids/RussianAlphabetForKids-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/RussianAlphabetForKids/Library\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -742,6 +781,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RussianAlphabetForKids/RussianAlphabetForKids-Prefix.pch";
 				INFOPLIST_FILE = "RussianAlphabetForKids/RussianAlphabetForKids-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/RussianAlphabetForKids/Library\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

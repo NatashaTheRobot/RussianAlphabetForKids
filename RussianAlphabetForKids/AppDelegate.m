@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GAI.h"
 
 @implementation AppDelegate
 
@@ -17,8 +18,17 @@
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIFont fontWithName:@"Avenir-Bold" size:17.0],
       UITextAttributeFont, nil]];
-        
-    // Override point for customization after application launch.
+    
+    // Google Analytics
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+    [GAI sharedInstance].dispatchInterval = 20;
+    // Optional: set debug to YES for extra debugging information.
+    [GAI sharedInstance].debug = YES;
+    // Create tracker instance.
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-42120159-1"];
+    
     return YES;
 }
 							
