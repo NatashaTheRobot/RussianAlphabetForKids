@@ -58,10 +58,6 @@
     self.detailCollectionView.layer.shadowOpacity = 1.0f;
     self.detailCollectionView.layer.masksToBounds = NO;
     
-    
-    self.view.layer.cornerRadius = 7;
-    self.view.layer.masksToBounds = YES;
-    
     [self.selectedLetter playSound];
     
 }

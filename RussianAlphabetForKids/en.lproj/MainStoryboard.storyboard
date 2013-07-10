@@ -14,7 +14,7 @@
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N1P-su-nM3">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="WZT-f8-wZl"/>
+                                    <constraint firstAttribute="height" constant="70" id="SOG-ya-a6f"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="fwk-Dg-p2p">
                                     <size key="itemSize" width="50" height="50"/>
@@ -24,7 +24,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="letter" id="SQ9-ed-mox" customClass="NavigationLetterCollectionViewCell">
-                                        <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                        <rect key="frame" x="15" y="9" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -57,20 +57,20 @@
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mf5-tD-Kyk">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="495" id="hmc-bU-yLH"/>
+                                    <constraint firstAttribute="height" constant="500" id="8T6-58-kdH"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="RHi-uf-KcJ">
-                                    <size key="itemSize" width="320" height="475"/>
+                                    <size key="itemSize" width="320" height="500"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="letter" id="3Fm-uC-DgU" customClass="LetterDetailCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="475"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGz-Vt-EBI">
@@ -91,12 +91,12 @@
                                         </view>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="eGz-Vt-EBI" secondAttribute="bottom" constant="32" id="9S1-uC-nCR"/>
-                                            <constraint firstItem="eGz-Vt-EBI" firstAttribute="leading" secondItem="3Fm-uC-DgU" secondAttribute="leading" type="default" id="Gtp-j4-lZy"/>
-                                            <constraint firstItem="VVF-Te-6Qy" firstAttribute="leading" secondItem="3Fm-uC-DgU" secondAttribute="leading" type="default" id="JFk-Yz-93l"/>
-                                            <constraint firstItem="VVF-Te-6Qy" firstAttribute="trailing" secondItem="3Fm-uC-DgU" secondAttribute="trailing" type="default" id="OhK-ME-GyH"/>
-                                            <constraint firstItem="VVF-Te-6Qy" firstAttribute="top" secondItem="3Fm-uC-DgU" secondAttribute="top" constant="20" type="default" id="XVK-Pq-s3u"/>
-                                            <constraint firstItem="eGz-Vt-EBI" firstAttribute="trailing" secondItem="3Fm-uC-DgU" secondAttribute="trailing" type="default" id="pWC-FN-cuB"/>
+                                            <constraint firstItem="VVF-Te-6Qy" firstAttribute="trailing" secondItem="3Fm-uC-DgU" secondAttribute="trailing" type="default" id="Rcj-zw-gQH"/>
+                                            <constraint firstItem="VVF-Te-6Qy" firstAttribute="leading" secondItem="3Fm-uC-DgU" secondAttribute="leading" type="default" id="bFJ-Gs-UPu"/>
+                                            <constraint firstAttribute="bottom" secondItem="eGz-Vt-EBI" secondAttribute="bottom" constant="35" id="bo2-Qs-kSb"/>
+                                            <constraint firstItem="VVF-Te-6Qy" firstAttribute="top" secondItem="3Fm-uC-DgU" secondAttribute="top" constant="23" id="cC8-zs-pen"/>
+                                            <constraint firstItem="eGz-Vt-EBI" firstAttribute="leading" secondItem="3Fm-uC-DgU" secondAttribute="leading" type="default" id="gi1-CP-Yvc"/>
+                                            <constraint firstItem="eGz-Vt-EBI" firstAttribute="trailing" secondItem="3Fm-uC-DgU" secondAttribute="trailing" type="default" id="uWh-Qk-bXn"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="VVF-Te-6Qy" id="3yA-GN-PP4"/>
@@ -115,10 +115,10 @@
                         <constraints>
                             <constraint firstItem="N1P-su-nM3" firstAttribute="leading" secondItem="qv1-DP-I79" secondAttribute="leading" type="default" id="P27-PI-q12"/>
                             <constraint firstItem="Mf5-tD-Kyk" firstAttribute="top" secondItem="qv1-DP-I79" secondAttribute="top" type="default" id="UB4-rT-qXw"/>
-                            <constraint firstItem="N1P-su-nM3" firstAttribute="bottom" secondItem="qv1-DP-I79" secondAttribute="bottom" type="default" id="Wdg-0J-IMq"/>
                             <constraint firstItem="Mf5-tD-Kyk" firstAttribute="leading" secondItem="qv1-DP-I79" secondAttribute="leading" type="default" id="ZTP-cl-u1Z"/>
                             <constraint firstItem="Mf5-tD-Kyk" firstAttribute="trailing" secondItem="qv1-DP-I79" secondAttribute="trailing" type="default" id="aIp-8S-lNN"/>
                             <constraint firstItem="N1P-su-nM3" firstAttribute="trailing" secondItem="qv1-DP-I79" secondAttribute="trailing" type="default" id="o8r-7I-lf5"/>
+                            <constraint firstItem="N1P-su-nM3" firstAttribute="top" secondItem="qv1-DP-I79" secondAttribute="top" constant="500" id="vu8-GI-ezH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="A a" id="PjM-xo-oIH"/>
@@ -137,6 +137,9 @@
         <image name="apple.png" width="320" height="230"/>
     </resources>
     <classes>
+        <class className="GAITrackedViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GAITrackedViewController.h"/>
+        </class>
         <class className="LetterDetailCollectionViewCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LetterDetailCollectionViewCell.h"/>
             <relationships>
@@ -162,10 +165,7 @@
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
+        <class className="ViewController" superclassName="GAITrackedViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="detailCollectionView" candidateClass="UICollectionView"/>
